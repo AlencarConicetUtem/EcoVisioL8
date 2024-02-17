@@ -6,7 +6,7 @@
 name=EcoVisioL8
 qgisMinimumVersion=3.0
 description=Este complemento fue diseñado para automatizar y optimizar la obtención de índices SAVI, NDVI y SIPI, así como la realización de correcciones atmosféricas en imágenes Landsat 8.
-version=1.0
+version=1.1
 author=Keyla Alencar da Silva, Francisca Ruiz-Tagle, Erik Zimmemann y Maria Carolina Parodi. CONICET, UTEM y UNR
 email=lab.suelos@utem.cl
 
@@ -21,6 +21,8 @@ repository=https://github.com/AlencarConicetUtem/EcoVisioL8
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 # changelog=
+	1.1
+	-Se corrigió la fórmula para el cálculo del índice SIPI.
 
 # Tags are comma separated with spaces allowed
 tags=python
