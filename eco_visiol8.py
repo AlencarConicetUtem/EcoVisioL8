@@ -601,9 +601,6 @@ class EcoVisiol8:
         self.correccion(4,banda_4,RADIANCE_MULT_BAND[2],RADIANCE_ADD_BAND[2],distancia_tierra_sol,cos_elevacion_solar,ESUN[2])
         self.correccion(5,banda_5,RADIANCE_MULT_BAND[3],RADIANCE_ADD_BAND[3],distancia_tierra_sol,cos_elevacion_solar,ESUN[3])
 
-
-
-
     def NDVI(self, path_4, path_5, nombre_salida,banda_corr_4,banda_corr_5):
         dirB4 = path_4 
         dirB5 = path_5
@@ -651,7 +648,7 @@ class EcoVisiol8:
         banda_55.bandNumber = 1
         entradas.append(banda_55)
 
-        calc = QgsRasterCalculator(f"('{banda_corr_5}'-'{banda_corr_2}')/('{banda_corr_5}'+'{banda_corr_4}')", salida, 'GTiff', banda_2.extent(), banda_2.width(), banda_2.height(), entradas)
+        calc = QgsRasterCalculator(f"('{banda_corr_5}'-'{banda_corr_2}')/('{banda_corr_5}'-'{banda_corr_4}')", salida, 'GTiff', banda_2.extent(), banda_2.width(), banda_2.height(), entradas)
         calc.processCalculation()
 
     def SAVI(self, path_4, path_5, nombre_salida,banda_corr_4,banda_corr_5):
